@@ -2,6 +2,8 @@ import { Command } from 'commander';
 import { loginCommand } from './commands/login.js';
 import { logoutCommand } from './commands/logout.js';
 import { whoamiCommand } from './commands/whoami.js';
+import { creditCommand } from './commands/credit.js';
+import { membershipCommand } from './commands/membership.js';
 
 const program = new Command();
 
@@ -24,5 +26,15 @@ program
   .command('whoami')
   .description('Show your ClawApps account info')
   .action(whoamiCommand);
+
+program
+  .command('credit')
+  .description('Open credit recharge page in browser')
+  .action(creditCommand);
+
+program
+  .command('membership')
+  .description('Open membership subscription page in browser')
+  .action(membershipCommand);
 
 program.parse();

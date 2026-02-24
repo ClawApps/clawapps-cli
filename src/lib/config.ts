@@ -14,6 +14,9 @@ export const CONFIG = {
   CLAW_REFRESH: 'https://api.clawapps.ai/api/v1/auth/refresh',
   CLAW_LOGOUT: 'https://api.clawapps.ai/api/v1/auth/logout',
 
+  // Web
+  CLAW_WEB_BASE: 'https://www.clawapps.ai',
+
   // Timeouts
   AUTH_TIMEOUT_MS: 2 * 60 * 1000, // 2 minutes
 
