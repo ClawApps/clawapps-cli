@@ -30,12 +30,14 @@ export function startPaymentCallbackServer(): Promise<{
         const paymentToken = url.searchParams.get('payment_token');
         const autoPayment = url.searchParams.get('auto_payment');
 
-        if (paymentToken) {
+        const isAutoPayment = autoPayment === '1';
+
+        if (paymentToken || isAutoPayment) {
           res.writeHead(200, { 'Content-Type': 'text/html' });
           res.end(getSuccessHtml());
           resultResolve!({
-            payment_token: paymentToken,
-            auto_payment: autoPayment === '1',
+            payment_token: paymentToken || undefined,
+            auto_payment: isAutoPayment,
           });
         } else {
           res.writeHead(200, { 'Content-Type': 'text/html' });

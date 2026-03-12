@@ -20,7 +20,7 @@ export interface Credentials {
 }
 
 export interface PaymentGrantResult {
-  payment_token: string;
+  payment_token?: string;
   auto_payment: boolean;
 }
 

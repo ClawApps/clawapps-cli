@@ -44,7 +44,9 @@ export async function paymentGrantCommand(skillId: string): Promise<void> {
     spinner.stop();
 
     console.log(chalk.green('\nPayment grant confirmed!'));
-    console.log(chalk.gray(`Payment Token: ${payment.payment_token}`));
+    if (payment.payment_token) {
+      console.log(chalk.gray(`Payment Token: ${payment.payment_token}`));
+    }
     console.log(chalk.gray(`Auto Payment: ${payment.auto_payment ? 'enabled' : 'disabled'}`));
   } catch (err) {
     spinner.stop();
