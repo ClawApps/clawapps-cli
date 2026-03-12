@@ -19,6 +19,11 @@ export interface Credentials {
   logged_in_at: string;
 }
 
+export interface PaymentGrantResult {
+  payment_token: string;
+  auto_payment: boolean;
+}
+
 export interface UserInfo {
   id: string;
   email: string;
