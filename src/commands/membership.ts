@@ -8,13 +8,13 @@ export async function membershipCommand(): Promise<void> {
   const credentials = await loadCredentials();
 
   if (!credentials) {
-    console.log(chalk.yellow('Not logged in. Run `claw login` first.'));
+    console.log(chalk.yellow('Not logged in. Run `clawapps login` first.'));
     process.exit(1);
   }
 
   const token = await ensureValidToken(credentials);
   if (!token) {
-    console.log(chalk.red('Session expired. Please run `claw login` again.'));
+    console.log(chalk.red('Session expired. Please run `clawapps login` again.'));
     process.exit(1);
   }
 

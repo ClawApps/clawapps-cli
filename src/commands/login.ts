@@ -19,7 +19,7 @@ export async function loginCommand(): Promise<void> {
         if (res.ok) {
           const user = res.data.data;
           console.log(chalk.green(`Already logged in as ${chalk.bold(user.email || user.name || 'user')}.`));
-          console.log(chalk.gray('Session refreshed. Run `claw logout` first to switch accounts.'));
+          console.log(chalk.gray('Session refreshed. Run `clawapps logout` first to switch accounts.'));
           return;
         }
       }
@@ -73,7 +73,7 @@ export async function loginCommand(): Promise<void> {
       }
     } else {
       console.log(chalk.green('\nLogin successful!'));
-      console.log(chalk.gray('Run `claw whoami` to see your account info.'));
+      console.log(chalk.gray('Run `clawapps whoami` to see your account info.'));
     }
   } catch (err) {
     spinner.stop();

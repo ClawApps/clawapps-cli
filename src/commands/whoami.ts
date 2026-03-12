@@ -9,7 +9,7 @@ export async function whoamiCommand(): Promise<void> {
   const credentials = await loadCredentials();
 
   if (!credentials) {
-    console.log(chalk.yellow('Not logged in. Run `claw login` first.'));
+    console.log(chalk.yellow('Not logged in. Run `clawapps login` first.'));
     process.exit(1);
   }
 
@@ -28,7 +28,7 @@ export async function whoamiCommand(): Promise<void> {
 
       if (!refreshRes.ok) {
         spinner.stop();
-        console.log(chalk.red('Session expired. Please run `claw login` again.'));
+        console.log(chalk.red('Session expired. Please run `clawapps login` again.'));
         process.exit(1);
       }
 
@@ -48,7 +48,7 @@ export async function whoamiCommand(): Promise<void> {
     spinner.stop();
 
     if (!res.ok) {
-      console.log(chalk.red('Failed to fetch user info. Please run `claw login` again.'));
+      console.log(chalk.red('Failed to fetch user info. Please run `clawapps login` again.'));
       process.exit(1);
     }
 

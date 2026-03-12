@@ -190,7 +190,7 @@ export function getGoogleCallbackHtml(port: number): string {
         errorIcon.style.display = 'flex';
         status.textContent = err.message;
         status.className = 'status error';
-        hint.textContent = 'Please try running claw login again.';
+        hint.textContent = 'Please try running clawapps login again.';
       }
     })();
   </script>
@@ -245,7 +245,7 @@ export function getErrorHtml(message: string): string {
     <div class="brand">Welcome to Claw<span>Apps</span></div>
     <div class="error-icon" style="display:flex">${ERROR_SVG}</div>
     <p class="status error">${safeMessage}</p>
-    <p class="hint">Please try running claw login again.</p>
+    <p class="hint">Please try running clawapps login again.</p>
   </div>
 </body>
 </html>`;

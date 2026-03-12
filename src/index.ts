@@ -10,9 +10,9 @@ import { paymentGrantCommand } from './commands/payment-grant.js';
 const program = new Command();
 
 program
-  .name('claw')
+  .name('clawapps')
   .description('ClawApps CLI - Manage your ClawApps account')
-  .version('0.2.1');
+  .version('0.3.0');
 
 program
   .command('login')
