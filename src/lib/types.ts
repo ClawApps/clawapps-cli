@@ -24,6 +24,16 @@ export interface PaymentGrantResult {
   auto_payment: boolean;
 }
 
+export interface AuthCodeLoginResult {
+  access_token: string;
+  refresh_token: string;
+}
+
+export interface AuthCodePaymentResult {
+  one_time_pay_token?: string;
+  auto_pay_enabled: boolean;
+}
+
 export interface UserInfo {
   id: string;
   email: string;

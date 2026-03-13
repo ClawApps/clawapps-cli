@@ -15,10 +15,16 @@ export const CONFIG = {
   CLAW_LOGOUT: 'https://api.clawapps.ai/api/v1/auth/logout',
 
   // Web
-  CLAW_WEB_BASE: 'https://www.clawapps.ai',
+  CLAW_WEB_BASE: 'https://clawapps.ai',
+
+  // Agent code endpoints
+  AGENT_CREATE_LOGIN_CODE: 'https://api.clawapps.ai/api/v1/agent/create-login-code',
+  AGENT_CREATE_PAYMENT_CODE: 'https://api.clawapps.ai/api/v1/agent/create-payment-code',
+  AGENT_AUTH_CODE: 'https://api.clawapps.ai/api/v1/agent/auth-code',
+  AUTH_POLL_INTERVAL_MS: 3 * 1000, // 3 seconds
 
   // Timeouts
-  AUTH_TIMEOUT_MS: 2 * 60 * 1000, // 2 minutes
+  AUTH_TIMEOUT_MS: 3 * 60 * 1000, // 3 minutes
 
   // Credentials
   CREDENTIALS_DIR: '.clawapps',

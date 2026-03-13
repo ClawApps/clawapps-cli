@@ -6,13 +6,14 @@ import { creditCommand } from './commands/credit.js';
 import { membershipCommand } from './commands/membership.js';
 import { tokenCommand } from './commands/token.js';
 import { paymentGrantCommand } from './commands/payment-grant.js';
+import { rechargeCreditsCommand } from './commands/recharge-credits.js';
 
 const program = new Command();
 
 program
   .name('clawapps')
   .description('ClawApps CLI - Manage your ClawApps account')
-  .version('0.3.0');
+  .version('0.4.0');
 
 program
   .command('login')
@@ -49,5 +50,10 @@ program
   .description('Open payment grant page for a skill')
   .argument('<skill_id>', 'The skill ID to grant payment for')
   .action(paymentGrantCommand);
+
+program
+  .command('recharge-credits')
+  .description('Display QR code for credit recharge page')
+  .action(rechargeCreditsCommand);
 
 program.parse();
